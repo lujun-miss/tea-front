@@ -90,7 +90,11 @@ body {
 }
 
 .page-content {
-  height: calc(100% - 44px - 83px);
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 83px;
   overflow-y: auto;
   padding-bottom: 20px;
 }
