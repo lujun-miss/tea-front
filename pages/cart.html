@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="status-bar">
+            <span>9:41</span>
+            <div class="flex items-center gap-1">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="h-[calc(100%-44px-83px-60px)] overflow-y-auto custom-scrollbar pb-4">
+            <div class="px-4 py-3">
+                <div class="flex items-center justify-between mb-4">
+                    <h1 class="text-lg font-semibold text-gray-800">购物车</h1>
+                    <span class="text-sm text-gray-500">编辑</span>
+                </div>
+
+                <div class="space-y-3 mb-4">
+                    <div class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="flex gap-3">
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 rounded-full border-2 border-green-600 flex items-center justify-center">
+                                    <i class="fas fa-check text-green-600 text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍃</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">西湖龙井 2024春茶</h4>
+                                    <p class="text-xs text-gray-500">250g</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥288</span>
+                                    <div class="flex items-center gap-2">
+                                        <button class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-minus text-gray-400 text-xs"></i>
+                                        </button>
+                                        <span class="text-sm text-gray-800">1</span>
+                                        <button class="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-plus text-white text-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="flex gap-3">
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 rounded-full border-2 border-green-600 flex items-center justify-center">
+                                    <i class="fas fa-check text-green-600 text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍂</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">金骏眉 正山小种</h4>
+                                    <p class="text-xs text-gray-500">250g</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥368</span>
+                                    <div class="flex items-center gap-2">
+                                        <button class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-minus text-gray-400 text-xs"></i>
+                                        </button>
+                                        <span class="text-sm text-gray-800">1</span>
+                                        <button class="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-plus text-white text-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="flex gap-3">
+                            <div class="flex items-center">
+                                <div class="w-5 h-5 rounded-full border-2 border-gray-300"></div>
+                            </div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🫖</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">紫砂壶 宜兴原矿</h4>
+                                    <p class="text-xs text-gray-500">经典款</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥1280</span>
+                                    <div class="flex items-center gap-2">
+                                        <button class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-minus text-gray-400 text-xs"></i>
+                                        </button>
+                                        <span class="text-sm text-gray-800">1</span>
+                                        <button class="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-plus text-white text-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-sm font-medium text-gray-800">配送方式</span>
+                        <div class="flex items-center gap-2 text-xs text-gray-500">
+                            <span>顺丰快递</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-medium text-gray-800">收货地址</span>
+                        <div class="flex items-center gap-2 text-xs text-gray-500">
+                            <span>浙江省杭州市西湖区...</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm text-gray-600">商品金额</span>
+                        <span class="text-sm text-gray-800">¥1,936</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm text-gray-600">运费</span>
+                        <span class="text-sm text-green-600">免运费</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm text-gray-600">优惠券</span>
+                        <div class="flex items-center gap-2 text-xs text-gray-500">
+                            <span>暂无可用</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100 pt-2 mt-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-gray-800">合计</span>
+                            <span class="text-lg font-bold text-green-600">¥656</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-4 mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-gift text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-sm font-medium text-gray-800">满减优惠</h4>
+                            <p class="text-xs text-gray-500">满500减50，满1000减120</p>
+                        </div>
+                        <span class="text-xs bg-green-600 text-white px-3 py-1 rounded-full">已优惠¥50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-[83px] left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between z-10">
+            <div class="flex items-center gap-3">
+                <div class="w-5 h-5 rounded-full border-2 border-green-600 flex items-center justify-center">
+                    <i class="fas fa-check text-green-600 text-xs"></i>
+                </div>
+                <span class="text-sm text-gray-600">全选</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="text-right">
+                    <div class="text-xs text-gray-500">合计</div>
+                    <div class="text-lg font-bold text-green-600">¥656</div>
+                </div>
+                <button class="bg-green-600 text-white px-6 py-2.5 rounded-full text-sm font-medium" onclick="window.location.href='confirm-order.html'">结算(2)</button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="category.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </a>
+            <a href="cart.html" class="nav-item active">
+                <i class="fas fa-shopping-cart"></i>
+                <span>购物车</span>
+            </a>
+            <a href="order.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>订单</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="status-bar">
+            <span>9:41</span>
+            <div class="flex items-center gap-1">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="h-[calc(100%-44px-83px)] overflow-y-auto custom-scrollbar">
+            <div class="px-4 py-3">
+                <h1 class="text-lg font-semibold text-gray-800 mb-4">我的订单</h1>
+
+                <div class="flex gap-2 mb-4 overflow-x-auto pb-2">
+                    <span class="px-4 py-2 bg-green-600 text-white rounded-full text-xs whitespace-nowrap">全部</span>
+                    <span class="px-4 py-2 bg-white text-gray-600 rounded-full text-xs whitespace-nowrap">待付款</span>
+                    <span class="px-4 py-2 bg-white text-gray-600 rounded-full text-xs whitespace-nowrap">待发货</span>
+                    <span class="px-4 py-2 bg-white text-gray-600 rounded-full text-xs whitespace-nowrap">待收货</span>
+                    <span class="px-4 py-2 bg-white text-gray-600 rounded-full text-xs whitespace-nowrap">已完成</span>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="bg-white rounded-2xl p-4 card-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-gray-500">订单号: 20240108123456</span>
+                            <span class="text-xs text-green-600 font-medium">待付款</span>
+                        </div>
+                        <div class="flex gap-3 mb-3">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍃</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">西湖龙井 2024春茶</h4>
+                                <p class="text-xs text-gray-500 mb-2">250g × 1</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥288</span>
+                                    <span class="text-xs text-gray-500">共1件</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-sm font-medium text-gray-800">实付款: <span class="text-green-600">¥288</span></span>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1.5 border border-gray-300 rounded-full text-xs text-gray-600">取消订单</button>
+                                <button class="px-3 py-1.5 bg-green-600 text-white rounded-full text-xs">立即付款</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 card-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-gray-500">订单号: 20240107123456</span>
+                            <span class="text-xs text-blue-600 font-medium">待发货</span>
+                        </div>
+                        <div class="flex gap-3 mb-3">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍂</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">金骏眉 正山小种</h4>
+                                <p class="text-xs text-gray-500 mb-2">250g × 2</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥736</span>
+                                    <span class="text-xs text-gray-500">共2件</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-sm font-medium text-gray-800">实付款: <span class="text-green-600">¥736</span></span>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1.5 border border-gray-300 rounded-full text-xs text-gray-600">联系客服</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 card-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-gray-500">订单号: 20240106123456</span>
+                            <span class="text-xs text-orange-600 font-medium">待收货</span>
+                        </div>
+                        <div class="flex gap-3 mb-3">
+                            <div class="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🫖</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">紫砂壶 宜兴原矿</h4>
+                                <p class="text-xs text-gray-500 mb-2">经典款 × 1</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥1280</span>
+                                    <span class="text-xs text-gray-500">共1件</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-sm font-medium text-gray-800">实付款: <span class="text-green-600">¥1280</span></span>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1.5 border border-gray-300 rounded-full text-xs text-gray-600">查看物流</button>
+                                <button class="px-3 py-1.5 bg-green-600 text-white rounded-full text-xs">确认收货</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 card-shadow">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-gray-500">订单号: 20240105123456</span>
+                            <span class="text-xs text-gray-600 font-medium">已完成</span>
+                        </div>
+                        <div class="flex gap-3 mb-3">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍃</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">西湖龙井 2024春茶</h4>
+                                <p class="text-xs text-gray-500 mb-2">250g × 1</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥288</span>
+                                    <span class="text-xs text-gray-500">共1件</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-sm font-medium text-gray-800">实付款: <span class="text-green-600">¥288</span></span>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1.5 border border-gray-300 rounded-full text-xs text-gray-600">再次购买</button>
+                                <button class="px-3 py-1.5 bg-green-600 text-white rounded-full text-xs">评价</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="category.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </a>
+            <a href="cart.html" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>购物车</span>
+            </a>
+            <a href="order.html" class="nav-item active">
+                <i class="fas fa-file-alt"></i>
+                <span>订单</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+</body>
+</html>

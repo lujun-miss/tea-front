@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        <div class="iphone-status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="px-4 pt-2 pb-4">
+                <div class="flex items-center gap-2 mb-4">
+                    <a href="home.html" class="w-8 h-8 flex items-center justify-center text-gray-600">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <form id="searchForm" class="flex-1 flex items-center gap-2">
+                        <input type="text" id="searchInput" placeholder="搜索茶叶、茶具" class="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-600">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors">
+                            搜索
+                        </button>
+                    </form>
+                </div>
+
+                <div id="searchResults" class="space-y-3"></div>
+
+                <div id="hotSearch" class="mt-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-base font-medium text-gray-800">热门搜索</h3>
+                        <i class="fas fa-fire text-orange-500"></i>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">西湖龙井</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">铁观音</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">普洱茶</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">大红袍</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">白毫银针</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">碧螺春</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">紫砂壶</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">功夫茶具</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">金骏眉</span>
+                        <span class="hot-search-tag px-3 py-1.5 bg-gray-100 rounded-full text-sm text-gray-700 cursor-pointer hover:bg-green-100 hover:text-green-700 transition-colors">祁门红茶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="category.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </a>
+            <a href="cart.html" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>购物车</span>
+            </a>
+            <a href="order.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>订单</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        const products = [
+            { name: '西湖龙井', category: '绿茶', price: 288, image: '🍃', sales: '12.3万' },
+            { name: '铁观音', category: '乌龙茶', price: 358, image: '🍵', sales: '8.6万' },
+            { name: '普洱茶', category: '黑茶', price: 488, image: '🫖', sales: '15.2万' },
+            { name: '白毫银针', category: '白茶', price: 458, image: '🌸', sales: '6.8万' },
+            { name: '大红袍', category: '乌龙茶', price: 588, image: '🌺', sales: '9.1万' },
+            { name: '碧螺春', category: '绿茶', price: 328, image: '🌿', sales: '7.5万' },
+            { name: '紫砂壶', category: '茶具', price: 1288, image: '🏺', sales: '2.3万' },
+            { name: '功夫茶具', category: '茶具', price: 688, image: '🫖', sales: '4.6万' },
+            { name: '金骏眉', category: '红茶', price: 688, image: '🍂', sales: '5.2万' },
+            { name: '祁门红茶', category: '红茶', price: 458, image: '🍁', sales: '3.8万' }
+        ];
+
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const keyword = searchInput.value.trim().toLowerCase();
+            
+            if (!keyword) {
+                return;
+            }
+
+            const hotSearch = document.getElementById('hotSearch');
+            hotSearch.style.display = 'none';
+
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(keyword) || 
+                product.category.toLowerCase().includes(keyword)
+            );
+
+            if (filteredProducts.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="text-center py-12 text-gray-500">
+                        <i class="fas fa-exclamation-circle text-4xl mb-3 text-gray-300"></i>
+                        <p class="text-sm">未找到与"${keyword}"相关的商品</p>
+                    </div>
+                `;
+            } else {
+                searchResults.innerHTML = `
+                    <div class="mb-3">
+                        <span class="text-sm text-gray-500">找到 ${filteredProducts.length} 个相关商品</span>
+                    </div>
+                    <div class="space-y-3">
+                        ${filteredProducts.map(product => `
+                            <a href="product-detail.html" class="bg-white rounded-2xl p-4 card-shadow flex gap-4">
+                                <div class="w-24 h-24 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-4xl">${product.image}</span>
+                                </div>
+                                <div class="flex-1 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-base font-medium text-gray-800 mb-1">${product.name}</h4>
+                                        <p class="text-xs text-gray-500">${product.category}</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-green-600 font-bold text-lg">¥${product.price}</span>
+                                        <span class="text-xs text-gray-400">销量${product.sales}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        `).join('')}
+                    </div>
+                `;
+            }
+        });
+
+        const hotSearchTags = document.querySelectorAll('.hot-search-tag');
+        hotSearchTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                const keyword = this.textContent.trim();
+                searchInput.value = keyword;
+                searchForm.dispatchEvent(new Event('submit'));
+            });
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchKeyword = urlParams.get('q');
+        if (searchKeyword) {
+            searchInput.value = searchKeyword;
+            searchForm.dispatchEvent(new Event('submit'));
+        }
+    </script>
+</body>
+</html>

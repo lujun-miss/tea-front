@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="status-bar">
+            <span>9:41</span>
+            <div class="flex items-center gap-1">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="px-4 pt-2 pb-4">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex-1 flex items-center gap-2">
+                        <i class="fas fa-search text-gray-400"></i>
+                        <input type="text" id="searchInput" placeholder="搜索茶叶、茶具" class="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-600 cursor-pointer" readonly>
+                    </div>
+                    <i class="fas fa-bell text-gray-600"></i>
+                </div>
+
+                <div class="relative mb-6 rounded-2xl overflow-hidden card-shadow">
+                    <div class="aspect-[2/1] bg-gradient-to-r from-green-700 to-green-500 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-2xl font-bold mb-2">春茶上市</h2>
+                            <p class="text-sm opacity-90">新茶品鉴 限时优惠</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
+                        <div class="w-2 h-2 rounded-full bg-white"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-5 gap-3 mb-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mb-1">
+                            <span class="text-2xl">🍵</span>
+                        </div>
+                        <span class="text-xs text-gray-700">绿茶</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center mb-1">
+                            <span class="text-2xl">🍂</span>
+                        </div>
+                        <span class="text-xs text-gray-700">红茶</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center mb-1">
+                            <span class="text-2xl">🌿</span>
+                        </div>
+                        <span class="text-xs text-gray-700">乌龙</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-1">
+                            <span class="text-2xl">🌸</span>
+                        </div>
+                        <span class="text-xs text-gray-700">白茶</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mb-1">
+                            <span class="text-2xl">🫖</span>
+                        </div>
+                        <span class="text-xs text-gray-700">茶具</span>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-gray-800">精选推荐</h3>
+                        <span class="text-sm text-green-600">查看更多 <i class="fas fa-chevron-right text-xs"></i></span>
+                    </div>
+                    <div id="productSlider" class="flex gap-3 overflow-x-auto pb-2 hide-scrollbar scroll-smooth">
+                        <div class="flex-shrink-0 w-36 bg-white rounded-2xl p-3 card-shadow cursor-pointer hover:scale-105 transition-transform" onclick="scrollToCard(this)">
+                            <div class="aspect-square bg-green-50 rounded-xl mb-2 flex items-center justify-center">
+                                <span class="text-4xl">🍃</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-800 truncate">西湖龙井</h4>
+                            <p class="text-xs text-gray-500 mb-1">2024新茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-600 font-bold">¥288</span>
+                                <span class="text-xs text-gray-400 line-through">¥388</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-36 bg-white rounded-2xl p-3 card-shadow cursor-pointer hover:scale-105 transition-transform" onclick="scrollToCard(this)">
+                            <div class="aspect-square bg-red-50 rounded-xl mb-2 flex items-center justify-center">
+                                <span class="text-4xl">🍂</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-800 truncate">金骏眉</h4>
+                            <p class="text-xs text-gray-500 mb-1">正山小种</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-600 font-bold">¥368</span>
+                                <span class="text-xs text-gray-400 line-through">¥488</span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-36 bg-white rounded-2xl p-3 card-shadow cursor-pointer hover:scale-105 transition-transform" onclick="scrollToCard(this)">
+                            <div class="aspect-square bg-amber-50 rounded-xl mb-2 flex items-center justify-center">
+                                <span class="text-4xl">🌿</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-800 truncate">铁观音</h4>
+                            <p class="text-xs text-gray-500 mb-1">清香型</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-600 font-bold">¥198</span>
+                                <span class="text-xs text-gray-400 line-through">¥268</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-gray-800">新品上市</h3>
+                        <span class="text-sm text-green-600">查看更多 <i class="fas fa-chevron-right text-xs"></i></span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                            <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 rounded-xl mb-2 flex items-center justify-center">
+                                <span class="text-4xl">🌸</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-800 truncate">白毫银针</h4>
+                            <p class="text-xs text-gray-500 mb-1">福鼎白茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-600 font-bold">¥458</span>
+                                <span class="text-xs bg-green-100 text-green-600 px-2 py-0.5 rounded-full">新品</span>
+                            </div>
+                        </a>
+                        <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                            <div class="aspect-square bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl mb-2 flex items-center justify-center">
+                                <span class="text-4xl">🫖</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-gray-800 truncate">紫砂壶</h4>
+                            <p class="text-xs text-gray-500 mb-1">宜兴原矿</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-green-600 font-bold">¥1280</span>
+                                <span class="text-xs bg-green-100 text-green-600 px-2 py-0.5 rounded-full">新品</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-gray-800">热销排行</h3>
+                        <span class="text-sm text-green-600">查看更多 <i class="fas fa-chevron-right text-xs"></i></span>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="product-detail.html" class="bg-white rounded-2xl p-3 flex gap-3 card-shadow">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍃</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">西湖龙井 2024春茶</h4>
+                                    <p class="text-xs text-gray-500">销量 2.3万件</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥288</span>
+                                    <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full">热销</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="product-detail.html" class="bg-white rounded-2xl p-3 flex gap-3 card-shadow">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍂</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">金骏眉 正山小种</h4>
+                                    <p class="text-xs text-gray-500">销量 1.8万件</p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥368</span>
+                                    <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full">热销</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-lg font-semibold text-gray-800">茶文化资讯</h3>
+                        <a href="articles.html" class="text-sm text-green-600">查看更多 <i class="fas fa-chevron-right text-xs"></i></a>
+                    </div>
+                    <div class="space-y-3">
+                        <a href="article-detail.html" class="block bg-white rounded-2xl overflow-hidden card-shadow">
+                            <div class="aspect-[2/1] bg-gradient-to-r from-green-700 to-green-500 flex items-center justify-center">
+                                <span class="text-5xl">🍵</span>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">如何正确冲泡西湖龙井？</h4>
+                                <p class="text-xs text-gray-500">水温、投茶量、冲泡时间详解</p>
+                            </div>
+                        </a>
+                        <a href="article-detail.html" class="block bg-white rounded-2xl overflow-hidden card-shadow">
+                            <div class="aspect-[2/1] bg-gradient-to-r from-amber-700 to-amber-500 flex items-center justify-center">
+                                <span class="text-5xl">🫖</span>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">紫砂壶的选购与保养指南</h4>
+                                <p class="text-xs text-gray-500">新手必看的茶器知识</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="category.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </a>
+            <a href="cart.html" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>购物车</span>
+            </a>
+            <a href="order.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>订单</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function scrollToCard(card) {
+            const slider = document.getElementById('productSlider');
+            const sliderWidth = slider.offsetWidth;
+            const cardWidth = card.offsetWidth;
+            const cardOffsetLeft = card.offsetLeft;
+            
+            const scrollPosition = cardOffsetLeft - (sliderWidth - cardWidth) / 2;
+            
+            slider.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        const searchInput = document.getElementById('searchInput');
+
+        searchInput.addEventListener('click', function() {
+            window.location.href = 'search.html';
+        });
+    </script>
+</body>
+</html>

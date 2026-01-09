@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="status-bar">
+            <span>9:41</span>
+            <div class="flex items-center gap-1">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="h-[calc(100%-44px-60px)] overflow-y-auto custom-scrollbar">
+            <div class="relative">
+                <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                    <span class="text-8xl">🍃</span>
+                </div>
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1">
+                    <div class="w-2 h-2 rounded-full bg-green-600"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                    <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                </div>
+                <div class="absolute top-4 left-4 w-8 h-8 bg-black/30 rounded-full flex items-center justify-center cursor-pointer" onclick="history.back()">
+                    <i class="fas fa-chevron-left text-white text-sm"></i>
+                </div>
+                <div class="absolute top-4 right-4 flex gap-2">
+                    <div class="w-8 h-8 bg-black/30 rounded-full flex items-center justify-center">
+                        <i class="fas fa-share-alt text-white text-sm"></i>
+                    </div>
+                    <div class="w-8 h-8 bg-black/30 rounded-full flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-white text-sm"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 mb-3">
+                <div class="flex items-baseline gap-2 mb-2">
+                    <span class="text-2xl font-bold text-green-600">¥288</span>
+                    <span class="text-sm text-gray-400 line-through">¥388</span>
+                    <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full">限时优惠</span>
+                </div>
+                <h1 class="text-lg font-semibold text-gray-800 mb-2">西湖龙井 2024春茶 特级明前茶</h1>
+                <div class="flex items-center gap-4 text-xs text-gray-500">
+                    <span><i class="fas fa-star text-yellow-400"></i> 4.9分</span>
+                    <span>已售2.3万件</span>
+                    <span>好评率98%</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 mb-3">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-medium text-gray-800">规格</span>
+                    <span class="text-xs text-gray-500">请选择规格</span>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 bg-green-50 text-green-700 border border-green-600 rounded-lg text-xs">250g</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-600 border border-gray-200 rounded-lg text-xs">500g</span>
+                    <span class="px-3 py-1.5 bg-gray-50 text-gray-600 border border-gray-200 rounded-lg text-xs">礼盒装</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 mb-3">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-medium text-gray-800">配送</span>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <span>浙江杭州</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-gray-500">
+                    <i class="fas fa-truck"></i>
+                    <span>预计明天送达</span>
+                    <span class="text-green-600">包邮</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 mb-3">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-medium text-gray-800">用户评价</span>
+                    <span class="text-xs text-green-600">查看全部 <i class="fas fa-chevron-right text-xs"></i></span>
+                </div>
+                <div class="space-y-3">
+                    <div class="border-b border-gray-100 pb-3">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400 text-xs"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-800">茶***客</div>
+                                <div class="flex items-center gap-1">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600">茶叶品质很好，香气浓郁，冲泡后汤色清澈，口感甘甜。包装也很精美，送礼很有面子。</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400 text-xs"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-800">爱***茶</div>
+                                <div class="flex items-center gap-1">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-600">第二次购买了，一如既往的好。新茶上市就赶紧下单，果然没让我失望。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 mb-3">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-medium text-gray-800">商品详情</span>
+                </div>
+                <div class="space-y-3 text-xs text-gray-600">
+                    <div class="flex items-start gap-2">
+                        <span class="text-gray-400 w-12">产地</span>
+                        <span>浙江省杭州市西湖区</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-gray-400 w-12">等级</span>
+                        <span>特级明前茶</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-gray-400 w-12">保质期</span>
+                        <span>18个月</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-gray-400 w-12">储存</span>
+                        <span>密封、避光、冷藏</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-medium text-gray-800">商品描述</span>
+                </div>
+                <div class="aspect-[2/1] bg-gradient-to-br from-green-100 to-green-50 rounded-xl mb-3 flex items-center justify-center">
+                    <span class="text-5xl">🍃</span>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    西湖龙井是中国十大名茶之一，产于浙江省杭州市西湖区。本产品选用2024年明前嫩芽，采用传统工艺精心制作，外形扁平光滑，色泽翠绿，香气清高持久，滋味鲜爽甘醇，汤色嫩绿明亮。
+                </p>
+                <div class="aspect-[2/1] bg-gradient-to-br from-green-100 to-green-50 rounded-xl mt-3 flex items-center justify-center">
+                    <span class="text-5xl">🍵</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center gap-3">
+            <div class="flex items-center gap-4">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-store text-gray-400"></i>
+                    <span class="text-xs text-gray-400">店铺</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-comment-dots text-gray-400"></i>
+                    <span class="text-xs text-gray-400">客服</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-shopping-cart text-gray-400"></i>
+                    <span class="text-xs text-gray-400">购物车</span>
+                </div>
+            </div>
+            <div class="flex-1 flex gap-2">
+                <button class="flex-1 bg-amber-500 text-white py-2.5 rounded-full text-sm font-medium">加入购物车</button>
+                <button class="flex-1 bg-green-600 text-white py-2.5 rounded-full text-sm font-medium" onclick="window.location.href='confirm-order.html'">立即购买</button>
+            </div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+</body>
+</html>

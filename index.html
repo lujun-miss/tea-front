@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶叶微信商城 - 高保真原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .nav-item {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .nav-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .nav-item i {
+            font-size: 48px;
+            color: #2E7D32;
+            margin-bottom: 15px;
+        }
+        
+        .nav-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .nav-item p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>茶叶微信商城</h1>
+            <p>高保真原型设计 - HTML + Tailwind CSS</p>
+        </div>
+        
+        <div class="nav-grid">
+            <a href="pages/home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <h3>首页</h3>
+                <p>商品推荐、分类导航、促销活动</p>
+            </a>
+            
+            <a href="pages/category.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <h3>商品分类</h3>
+                <p>浏览各类茶叶商品</p>
+            </a>
+            
+            <a href="pages/product-detail.html" class="nav-item">
+                <i class="fas fa-box"></i>
+                <h3>商品详情</h3>
+                <p>查看商品详细信息</p>
+            </a>
+            
+            <a href="pages/cart.html" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>购物车</h3>
+                <p>管理购物车商品</p>
+            </a>
+            
+            <a href="pages/order.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <h3>订单</h3>
+                <p>查看订单状态</p>
+            </a>
+            
+            <a href="pages/profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <h3>个人中心</h3>
+                <p>个人信息管理</p>
+            </a>
+            
+            <a href="pages/article.html" class="nav-item">
+                <i class="fas fa-newspaper"></i>
+                <h3>茶文化资讯</h3>
+                <p>了解茶文化知识</p>
+            </a>
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="demo.html" class="inline-block bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                <i class="fas fa-mobile-alt mr-2"></i>
+                查看iPhone模拟器版本
+            </a>
+        </div>
+    </div>
+</body>
+</html>

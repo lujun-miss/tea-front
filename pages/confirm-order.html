@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>确认订单 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="iphone-status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-44px-60px)] overflow-y-auto custom-scrollbar pb-20">
+            <div class="px-4 py-3">
+                <div class="flex items-center justify-between mb-4">
+                    <h1 class="text-lg font-semibold text-gray-800">确认订单</h1>
+                    <span class="text-sm text-green-600">编辑</span>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-600 to-green-500 rounded-2xl p-4 mb-4 text-white">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-map-marker-alt text-sm"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-semibold">张三</span>
+                                <span class="text-sm opacity-90">138****8888</span>
+                            </div>
+                            <p class="text-sm opacity-90">浙江省杭州市西湖区文三路 123 号茶叶大厦 5 楼</p>
+                            <div class="mt-2 text-xs bg-white/20 inline-block px-2 py-1 rounded">默认</div>
+                        </div>
+                        <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-sm font-semibold text-gray-800 mb-3">商品信息</h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex gap-3">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍃</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">西湖龙井 2024春茶</h4>
+                                <p class="text-xs text-gray-500 mb-2">250g</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥288</span>
+                                    <span class="text-sm text-gray-600">x1</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-3xl">🍂</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-medium text-gray-800 mb-1">金骏眉 正山小种</h4>
+                                <p class="text-xs text-gray-500 mb-2">250g</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-green-600 font-bold">¥368</span>
+                                    <span class="text-sm text-gray-600">x1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-100 mt-3 pt-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">配送方式</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm text-gray-800">顺丰快递</span>
+                                <span class="text-xs text-green-600">免运费</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-sm font-semibold text-gray-800 mb-3">支付方式</h3>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded-xl border-2 border-green-600">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-weixin text-white text-lg"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-800">微信支付</span>
+                            </div>
+                            <div class="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-alipay text-white text-lg"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-800">支付宝</span>
+                            </div>
+                            <div class="w-5 h-5 rounded-full border-2 border-gray-300"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-sm text-gray-600">商品金额</span>
+                        <span class="text-sm text-gray-800">¥656</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-sm text-gray-600">运费</span>
+                        <span class="text-sm text-green-600">免运费</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-sm text-gray-600">优惠券</span>
+                        <div class="flex items-center gap-2 text-xs text-gray-500">
+                            <span>暂无可用</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600">满减优惠</span>
+                        <span class="text-sm text-red-500">-¥50</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fas fa-comment-alt text-gray-400 text-sm"></i>
+                        <span class="text-sm text-gray-600">订单备注</span>
+                    </div>
+                    <input type="text" placeholder="选填，请输入备注信息" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:border-green-600">
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 flex items-center justify-between z-10">
+            <div class="flex-1">
+                <div class="text-xs text-gray-500">共 2 件商品</div>
+                <div class="flex items-baseline gap-1">
+                    <span class="text-sm text-gray-600">合计：</span>
+                    <span class="text-xl font-bold text-green-600">¥606</span>
+                </div>
+            </div>
+            <button class="bg-green-600 text-white px-8 py-2.5 rounded-full text-sm font-medium" onclick="submitOrder()">提交订单</button>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function submitOrder() {
+            alert('订单提交成功！');
+            window.location.href = 'order.html';
+        }
+    </script>
+</body>
+</html>
