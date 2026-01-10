@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收货地址 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-[70px] bg-white z-20">
+            <div class="flex items-center justify-between px-4 pt-2">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-black font-medium">3:53</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center h-[36px] relative">
+                <div class="absolute left-4 w-6 h-6 flex items-center justify-center cursor-pointer" onclick="goBack()">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 2L2.5 10L10.5 18" stroke="#8F1C46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-base font-medium text-gray-800">收货地址</h1>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-70px)] overflow-y-auto custom-scrollbar pb-20 mt-[45px]">
+            <div class="px-4 pt-4">
+                <div class="bg-white rounded-2xl p-4 mb-3 card-shadow border-2 border-green-500">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-semibold text-gray-800">张三</span>
+                                <span class="text-sm text-gray-600">138****8888</span>
+                                <span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">默认</span>
+                            </div>
+                            <p class="text-sm text-gray-600">浙江省杭州市西湖区文三路 123 号茶叶大厦 5 楼</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <i class="fas fa-edit text-gray-400 cursor-pointer"></i>
+                            <i class="fas fa-trash text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-3 card-shadow">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-semibold text-gray-800">李四</span>
+                                <span class="text-sm text-gray-600">139****9999</span>
+                            </div>
+                            <p class="text-sm text-gray-600">上海市浦东新区陆家嘴环路 1000 号</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <i class="fas fa-edit text-gray-400 cursor-pointer"></i>
+                            <i class="fas fa-trash text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-3 card-shadow">
+                    <div class="flex items-start gap-3">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-semibold text-gray-800">王五</span>
+                                <span class="text-sm text-gray-600">137****7777</span>
+                            </div>
+                            <p class="text-sm text-gray-600">北京市朝阳区建国路 88 号 SOHO 现代城</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <i class="fas fa-edit text-gray-400 cursor-pointer"></i>
+                            <i class="fas fa-trash text-gray-400 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-3 z-10">
+            <button class="w-full bg-green-600 text-white py-3 rounded-full text-sm font-medium" onclick="addAddress()">
+                <i class="fas fa-plus mr-2"></i>新增地址
+            </button>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function addAddress() {
+            alert('跳转到新增地址页面...');
+        }
+    </script>
+</body>
+</html>

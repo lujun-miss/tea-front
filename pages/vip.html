@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会员中心 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-[70px] bg-white z-20">
+            <div class="flex items-center justify-between px-4 pt-2">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-black font-medium">3:53</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center h-[36px] relative">
+                <div class="absolute left-4 w-6 h-6 flex items-center justify-center cursor-pointer" onclick="goBack()">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 2L2.5 10L10.5 18" stroke="#8F1C46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-base font-medium text-gray-800">会员中心</h1>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-70px)] overflow-y-auto custom-scrollbar pb-20 mt-[45px]">
+            <div class="px-4 pt-4">
+                <div class="bg-gradient-to-br from-amber-500 to-amber-400 rounded-2xl p-4 mb-4 text-white relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="absolute right-8 bottom-0 w-20 h-20 bg-white/10 rounded-full -mb-10"></div>
+                    <div class="relative">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                <i class="fas fa-crown text-amber-500 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-lg font-bold">VIP会员</h2>
+                                <p class="text-xs opacity-90">有效期至 2025-12-31</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-around text-center mb-4">
+                            <div>
+                                <div class="text-2xl font-bold">2580</div>
+                                <div class="text-xs opacity-90">会员积分</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">¥1280</div>
+                                <div class="text-xs opacity-90">累计消费</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold">8</div>
+                                <div class="text-xs opacity-90">优惠券</div>
+                            </div>
+                        </div>
+                        <div class="bg-white/20 rounded-full h-2 mb-2">
+                            <div class="bg-white rounded-full h-2 w-3/4"></div>
+                        </div>
+                        <p class="text-xs text-center opacity-90">距离升级还差 ¥720</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">会员特权</h3>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="text-center">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-1">
+                                <i class="fas fa-percentage text-red-500"></i>
+                            </div>
+                            <span class="text-xs text-gray-600">专享折扣</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-1">
+                                <i class="fas fa-gift text-orange-500"></i>
+                            </div>
+                            <span class="text-xs text-gray-600">生日礼遇</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-1">
+                                <i class="fas fa-shipping-fast text-green-500"></i>
+                            </div>
+                            <span class="text-xs text-gray-600">免运费</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-10 h-10 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-1">
+                                <i class="fas fa-headset text-purple-500"></i>
+                            </div>
+                            <span class="text-xs text-gray-600">专属客服</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">会员等级</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-gray-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-800">普通会员</span>
+                                    <span class="text-xs text-gray-500">已达成</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-1.5">
+                                    <div class="bg-gray-400 rounded-full h-1.5 w-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-amber-50 rounded-xl border-2 border-amber-400">
+                            <div class="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center">
+                                <i class="fas fa-crown text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-800">VIP会员</span>
+                                    <span class="text-xs text-amber-600">当前等级</span>
+                                </div>
+                                <div class="bg-amber-200 rounded-full h-1.5">
+                                    <div class="bg-amber-500 rounded-full h-1.5 w-3/4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+                            <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-gem text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-800">钻石会员</span>
+                                    <span class="text-xs text-gray-500">消费满2000元</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-1.5">
+                                    <div class="bg-gray-400 rounded-full h-1.5 w-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">积分记录</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-800">购物获得积分</p>
+                                <p class="text-xs text-gray-500">2025-01-10 15:30</p>
+                            </div>
+                            <span class="text-sm text-green-600 font-medium">+100</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-800">积分抵扣</p>
+                                <p class="text-xs text-gray-500">2025-01-08 10:20</p>
+                            </div>
+                            <span class="text-sm text-red-500 font-medium">-50</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-800">签到获得积分</p>
+                                <p class="text-xs text-gray-500">2025-01-07 08:00</p>
+                            </div>
+                            <span class="text-sm text-green-600 font-medium">+10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

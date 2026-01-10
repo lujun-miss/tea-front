@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的收藏 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-[70px] bg-white z-20">
+            <div class="flex items-center justify-between px-4 pt-2">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-black font-medium">3:53</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center h-[36px] relative">
+                <div class="absolute left-4 w-6 h-6 flex items-center justify-center cursor-pointer" onclick="goBack()">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 2L2.5 10L10.5 18" stroke="#8F1C46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-base font-medium text-gray-800">我的收藏</h1>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-70px)] overflow-y-auto custom-scrollbar pb-20 mt-[45px]">
+            <div class="px-4 pt-4">
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center relative">
+                            <span class="text-5xl">🍵</span>
+                            <button class="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-red-500 text-xs"></i>
+                            </button>
+                        </div>
+                        <div class="p-3">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1 truncate">西湖龙井特级明前茶</h4>
+                            <p class="text-xs text-gray-500 mb-2">2024春茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-green-600">¥188</span>
+                                <button class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">购买</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center relative">
+                            <span class="text-5xl">🍂</span>
+                            <button class="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-red-500 text-xs"></i>
+                            </button>
+                        </div>
+                        <div class="p-3">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1 truncate">金骏眉正山小种</h4>
+                            <p class="text-xs text-gray-500 mb-2">红茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-green-600">¥268</span>
+                                <button class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">购买</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center relative">
+                            <span class="text-5xl">🍃</span>
+                            <button class="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-red-500 text-xs"></i>
+                            </button>
+                        </div>
+                        <div class="p-3">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1 truncate">武夷山大红袍</h4>
+                            <p class="text-xs text-gray-500 mb-2">岩茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-green-600">¥328</span>
+                                <button class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">购买</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center relative">
+                            <span class="text-5xl">🌸</span>
+                            <button class="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-red-500 text-xs"></i>
+                            </button>
+                        </div>
+                        <div class="p-3">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1 truncate">茉莉花茶</h4>
+                            <p class="text-xs text-gray-500 mb-2">花茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-green-600">¥158</span>
+                                <button class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">购买</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center relative">
+                            <span class="text-5xl">🫖</span>
+                            <button class="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-red-500 text-xs"></i>
+                            </button>
+                        </div>
+                        <div class="p-3">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1 truncate">普洱熟茶</h4>
+                            <p class="text-xs text-gray-500 mb-2">黑茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-green-600">¥198</span>
+                                <button class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">购买</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-teal-100 to-teal-50 flex items-center justify-center relative">
+                            <span class="text-5xl">🍵</span>
+                            <button class="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-red-500 text-xs"></i>
+                            </button>
+                        </div>
+                        <div class="p-3">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1 truncate">安吉白茶</h4>
+                            <p class="text-xs text-gray-500 mb-2">绿茶</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-green-600">¥228</span>
+                                <button class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">购买</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

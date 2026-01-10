@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的优惠券 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-[70px] bg-white z-20">
+            <div class="flex items-center justify-between px-4 pt-2">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-black font-medium">3:53</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center h-[36px] relative">
+                <div class="absolute left-4 w-6 h-6 flex items-center justify-center cursor-pointer" onclick="goBack()">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 2L2.5 10L10.5 18" stroke="#8F1C46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-base font-medium text-gray-800">我的优惠券</h1>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-70px)] overflow-y-auto custom-scrollbar pb-20 mt-[45px]">
+            <div class="px-4 pt-4">
+                <div class="flex gap-2 mb-4">
+                    <button class="flex-1 py-2 text-sm font-medium text-white bg-green-600 rounded-full">可用 (8)</button>
+                    <button class="flex-1 py-2 text-sm font-medium text-gray-600 bg-white rounded-full">已过期</button>
+                    <button class="flex-1 py-2 text-sm font-medium text-gray-600 bg-white rounded-full">已使用</button>
+                </div>
+
+                <div class="bg-gradient-to-r from-red-500 to-red-400 rounded-2xl p-4 mb-3 text-white relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-2xl font-bold">¥50</span>
+                                <span class="text-xs opacity-90">满200可用</span>
+                            </div>
+                            <p class="text-xs opacity-90 mb-2">全场通用券</p>
+                            <p class="text-xs opacity-75">有效期至 2025-02-28</p>
+                        </div>
+                        <button class="bg-white text-red-500 px-4 py-2 rounded-full text-xs font-medium">立即使用</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-orange-500 to-orange-400 rounded-2xl p-4 mb-3 text-white relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-2xl font-bold">¥30</span>
+                                <span class="text-xs opacity-90">满150可用</span>
+                            </div>
+                            <p class="text-xs opacity-90 mb-2">新用户专享券</p>
+                            <p class="text-xs opacity-75">有效期至 2025-03-15</p>
+                        </div>
+                        <button class="bg-white text-orange-500 px-4 py-2 rounded-full text-xs font-medium">立即使用</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-500 to-green-400 rounded-2xl p-4 mb-3 text-white relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-2xl font-bold">¥20</span>
+                                <span class="text-xs opacity-90">满100可用</span>
+                            </div>
+                            <p class="text-xs opacity-90 mb-2">茶叶专享券</p>
+                            <p class="text-xs opacity-75">有效期至 2025-04-01</p>
+                        </div>
+                        <button class="bg-white text-green-500 px-4 py-2 rounded-full text-xs font-medium">立即使用</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-purple-500 to-purple-400 rounded-2xl p-4 mb-3 text-white relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-2xl font-bold">¥10</span>
+                                <span class="text-xs opacity-90">满50可用</span>
+                            </div>
+                            <p class="text-xs opacity-90 mb-2">茶具专享券</p>
+                            <p class="text-xs opacity-75">有效期至 2025-03-20</p>
+                        </div>
+                        <button class="bg-white text-purple-500 px-4 py-2 rounded-full text-xs font-medium">立即使用</button>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-500 to-blue-400 rounded-2xl p-4 mb-3 text-white relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-baseline gap-1 mb-1">
+                                <span class="text-2xl font-bold">¥15</span>
+                                <span class="text-xs opacity-90">满80可用</span>
+                            </div>
+                            <p class="text-xs opacity-90 mb-2">礼盒专享券</p>
+                            <p class="text-xs opacity-75">有效期至 2025-04-10</p>
+                        </div>
+                        <button class="bg-white text-blue-500 px-4 py-2 rounded-full text-xs font-medium">立即使用</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

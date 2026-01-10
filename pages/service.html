@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系客服 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-[70px] bg-white z-20">
+            <div class="flex items-center justify-between px-4 pt-2">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-black font-medium">3:53</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center h-[36px] relative">
+                <div class="absolute left-4 w-6 h-6 flex items-center justify-center cursor-pointer" onclick="goBack()">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 2L2.5 10L10.5 18" stroke="#8F1C46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-base font-medium text-gray-800">联系客服</h1>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-70px)] overflow-y-auto custom-scrollbar pb-20 mt-[45px]">
+            <div class="px-4 pt-4">
+                <div class="bg-gradient-to-br from-green-500 to-green-400 rounded-2xl p-6 mb-4 text-white text-center">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-4xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold mb-2">客服中心</h2>
+                    <p class="text-sm opacity-90">我们随时为您提供帮助</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">联系方式</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-green-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500">客服热线</p>
+                                <p class="text-base font-medium text-gray-800">400-888-8888</p>
+                            </div>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-full text-xs" onclick="callService()">
+                                拨打
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fab fa-weixin text-blue-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500">微信客服</p>
+                                <p class="text-base font-medium text-gray-800">tea_service</p>
+                            </div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-full text-xs" onclick="copyWeChat()">
+                                复制
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-purple-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-purple-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500">邮箱联系</p>
+                                <p class="text-base font-medium text-gray-800">service@tea.com</p>
+                            </div>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-full text-xs" onclick="copyEmail()">
+                                复制
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">服务时间</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">工作日</span>
+                            <span class="text-sm text-gray-800 font-medium">9:00 - 18:00</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">周末</span>
+                            <span class="text-sm text-gray-800 font-medium">10:00 - 17:00</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">节假日</span>
+                            <span class="text-sm text-gray-800 font-medium">10:00 - 16:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">常见问题</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showFAQ(1)">
+                            <span class="text-sm text-gray-800">如何修改订单？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showFAQ(2)">
+                            <span class="text-sm text-gray-800">退换货政策是什么？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showFAQ(3)">
+                            <span class="text-sm text-gray-800">如何使用优惠券？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showFAQ(4)">
+                            <span class="text-sm text-gray-800">配送需要多长时间？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">在线留言</h3>
+                    <textarea class="w-full h-32 p-3 border border-gray-200 rounded-xl text-sm resize-none focus:outline-none focus:border-green-500" placeholder="请输入您的问题或建议..."></textarea>
+                    <button class="w-full bg-green-600 text-white py-3 rounded-full text-sm font-medium mt-3" onclick="submitMessage()">
+                        提交留言
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function callService() {
+            window.location.href = 'tel:400-888-8888';
+        }
+
+        function copyWeChat() {
+            navigator.clipboard.writeText('tea_service');
+            alert('微信号已复制');
+        }
+
+        function copyEmail() {
+            navigator.clipboard.writeText('service@tea.com');
+            alert('邮箱已复制');
+        }
+
+        function showFAQ(id) {
+            alert('跳转到常见问题详情...');
+        }
+
+        function submitMessage() {
+            alert('留言已提交，我们会尽快回复您');
+        }
+    </script>
+</body>
+</html>

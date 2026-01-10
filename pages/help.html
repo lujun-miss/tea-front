@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助中心 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="absolute top-0 left-0 right-0 h-[70px] bg-white z-20">
+            <div class="flex items-center justify-between px-4 pt-2">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                    <div class="w-1 h-1 bg-black rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-black font-medium">3:53</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center h-[36px] relative">
+                <div class="absolute left-4 w-6 h-6 flex items-center justify-center cursor-pointer" onclick="goBack()">
+                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 2L2.5 10L10.5 18" stroke="#8F1C46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="text-base font-medium text-gray-800">帮助中心</h1>
+            </div>
+        </div>
+
+        <div class="page-content h-[calc(100%-70px)] overflow-y-auto custom-scrollbar pb-20 mt-[45px]">
+            <div class="px-4 pt-4">
+                <div class="bg-gradient-to-br from-blue-500 to-blue-400 rounded-2xl p-6 mb-4 text-white text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-question-circle text-3xl"></i>
+                    </div>
+                    <h2 class="text-lg font-bold mb-1">帮助中心</h2>
+                    <p class="text-sm opacity-90">搜索问题，快速找到答案</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+                        <i class="fas fa-search text-gray-400"></i>
+                        <input type="text" placeholder="搜索问题..." class="flex-1 bg-transparent text-sm focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">热门问题</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showAnswer(1)">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-red-600 text-xs font-bold">1</span>
+                            </div>
+                            <span class="text-sm text-gray-800 flex-1">如何修改订单？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showAnswer(2)">
+                            <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-orange-600 text-xs font-bold">2</span>
+                            </div>
+                            <span class="text-sm text-gray-800 flex-1">退换货政策是什么？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showAnswer(3)">
+                            <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-yellow-600 text-xs font-bold">3</span>
+                            </div>
+                            <span class="text-sm text-gray-800 flex-1">如何使用优惠券？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showAnswer(4)">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-green-600 text-xs font-bold">4</span>
+                            </div>
+                            <span class="text-sm text-gray-800 flex-1">配送需要多长时间？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer" onclick="showAnswer(5)">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-blue-600 text-xs font-bold">5</span>
+                            </div>
+                            <span class="text-sm text-gray-800 flex-1">如何联系客服？</span>
+                            <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">问题分类</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-red-50 to-red-100 rounded-xl cursor-pointer" onclick="showCategory(1)">
+                            <i class="fas fa-shopping-cart text-red-500 text-xl"></i>
+                            <span class="text-sm text-gray-800">购物指南</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl cursor-pointer" onclick="showCategory(2)">
+                            <i class="fas fa-undo text-orange-500 text-xl"></i>
+                            <span class="text-sm text-gray-800">退换货</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl cursor-pointer" onclick="showCategory(3)">
+                            <i class="fas fa-truck text-green-500 text-xl"></i>
+                            <span class="text-sm text-gray-800">配送服务</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl cursor-pointer" onclick="showCategory(4)">
+                            <i class="fas fa-credit-card text-blue-500 text-xl"></i>
+                            <span class="text-sm text-gray-800">支付方式</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl cursor-pointer" onclick="showCategory(5)">
+                            <i class="fas fa-user text-purple-500 text-xl"></i>
+                            <span class="text-sm text-gray-800">账户问题</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-4 bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl cursor-pointer" onclick="showCategory(6)">
+                            <i class="fas fa-gift text-pink-500 text-xl"></i>
+                            <span class="text-sm text-gray-800">优惠活动</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 mb-4 card-shadow">
+                    <h3 class="text-base font-semibold text-gray-800 mb-4">联系客服</h3>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-headset text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-800">在线客服</p>
+                                <p class="text-xs text-gray-500">工作时间 9:00-18:00</p>
+                            </div>
+                        </div>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-full text-xs" onclick="contactService()">
+                            联系
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function showAnswer(id) {
+            alert('跳转到问题详情页...');
+        }
+
+        function showCategory(id) {
+            alert('跳转到分类问题页...');
+        }
+
+        function contactService() {
+            window.location.href = './service.html';
+        }
+    </script>
+</body>
+</html>
