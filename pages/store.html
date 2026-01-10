@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店铺 - 茶叶微信商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        
+        <div class="status-bar">
+            <span>9:41</span>
+            <div class="flex items-center gap-1">
+                <i class="fas fa-signal text-xs"></i>
+                <i class="fas fa-wifi text-xs"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <div class="absolute top-14 left-2 z-40">
+            <button onclick="goBack()" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+                <i class="fas fa-arrow-left text-lg"></i>
+            </button>
+        </div>
+
+        <div class="h-[calc(100%-44px-83px)] overflow-y-auto custom-scrollbar">
+            <div class="bg-gradient-to-br from-green-700 to-green-500 p-4 pb-6">
+                <div class="text-white pl-12">
+                    <h2 class="text-lg font-semibold">雅品茶业旗舰店</h2>
+                    <div class="flex items-center gap-2 text-xs opacity-90 mt-1">
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-amber-300"></i>
+                            <span>4.9分</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white mx-4 -mt-4 rounded-2xl p-4 card-shadow mb-4">
+                <div class="flex justify-around text-center">
+                    <div>
+                        <div class="text-lg font-bold text-gray-800">128</div>
+                        <div class="text-xs text-gray-500">全部商品</div>
+                    </div>
+                    <div>
+                        <div class="text-lg font-bold text-gray-800">98%</div>
+                        <div class="text-xs text-gray-500">好评率</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-4 mb-4">
+                <div class="flex items-center justify-between mb-3">
+                    <h3 class="text-base font-semibold text-gray-800">店铺商品</h3>
+                    <div class="flex items-center gap-3 relative">
+                        <div class="flex items-center gap-1 text-xs text-green-600 font-medium cursor-pointer">
+                            <span>综合</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-1 text-xs text-gray-500 cursor-pointer hover:text-green-600">
+                            <span>销量</span>
+                            <i class="fas fa-sort text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-1 text-xs text-gray-500 cursor-pointer hover:text-green-600">
+                            <span>价格</span>
+                            <i class="fas fa-sort text-xs"></i>
+                        </div>
+                        <div class="flex items-center gap-1 text-xs text-gray-500 cursor-pointer hover:text-green-600" onclick="toggleFilter()">
+                            <i class="fas fa-filter text-xs"></i>
+                            <span>筛选</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-4">
+                    <button onclick="scrollCategories(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-green-600">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </button>
+                    <div id="categoryContainer" class="flex gap-2 overflow-x-auto pb-2 mx-8 hide-scrollbar scroll-smooth">
+                        <button class="px-4 py-1.5 bg-green-600 text-white rounded-full text-xs font-medium whitespace-nowrap">全部</button>
+                        <button class="px-4 py-1.5 bg-white text-gray-600 rounded-full text-xs font-medium whitespace-nowrap border border-gray-200">绿茶</button>
+                        <button class="px-4 py-1.5 bg-white text-gray-600 rounded-full text-xs font-medium whitespace-nowrap border border-gray-200">红茶</button>
+                        <button class="px-4 py-1.5 bg-white text-gray-600 rounded-full text-xs font-medium whitespace-nowrap border border-gray-200">白茶</button>
+                        <button class="px-4 py-1.5 bg-white text-gray-600 rounded-full text-xs font-medium whitespace-nowrap border border-gray-200">乌龙茶</button>
+                        <button class="px-4 py-1.5 bg-white text-gray-600 rounded-full text-xs font-medium whitespace-nowrap border border-gray-200">黑茶</button>
+                        <button class="px-4 py-1.5 bg-white text-gray-600 rounded-full text-xs font-medium whitespace-nowrap border border-gray-200">花茶</button>
+                    </div>
+                    <button onclick="scrollCategories(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-green-600">
+                        <i class="fas fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+
+                <div id="filterPanel" class="hidden absolute left-2 right-2 top-[254px] bg-white rounded-2xl shadow-lg z-[999] p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-base font-semibold text-gray-800">筛选</h3>
+                        <button onclick="toggleFilter()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times text-lg"></i>
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-4 mb-4">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-sm font-medium text-gray-800">价格区间</h4>
+                            <button class="text-xs text-green-600">重置</button>
+                        </div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <input type="text" placeholder="最低价" class="w-24 px-1.5 py-1 bg-white rounded-lg text-xs border border-gray-200 focus:outline-none focus:border-green-500">
+                            <span class="text-gray-400">-</span>
+                            <input type="text" placeholder="最高价" class="w-24 px-1.5 py-1 bg-white rounded-lg text-xs border border-gray-200 focus:outline-none focus:border-green-500">
+                        </div>
+                        <div class="flex gap-2 flex-wrap">
+                            <button class="px-3 py-1 bg-white text-gray-600 rounded-lg text-xs border border-gray-200">0-100</button>
+                            <button class="px-3 py-1 bg-white text-gray-600 rounded-lg text-xs border border-gray-200">100-300</button>
+                            <button class="px-3 py-1 bg-white text-gray-600 rounded-lg text-xs border border-gray-200">300-500</button>
+                            <button class="px-3 py-1 bg-white text-gray-600 rounded-lg text-xs border border-gray-200">500+</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-4 mb-4">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-sm font-medium text-gray-800">商品状态</h4>
+                        </div>
+                        <div class="flex gap-2 flex-wrap">
+                            <button class="px-3 py-1.5 bg-green-600 text-white rounded-lg text-xs">有货</button>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button class="flex-1 py-3 bg-gray-100 text-gray-600 rounded-full text-sm font-medium" onclick="toggleFilter()">重置</button>
+                        <button class="flex-1 py-3 bg-green-600 text-white rounded-full text-sm font-medium" onclick="toggleFilter()">确定</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 rounded-xl mb-2 flex items-center justify-center">
+                            <span class="text-4xl">🍃</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 truncate">西湖龙井</h4>
+                        <p class="text-xs text-gray-500 mb-1">2024春茶</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold">¥288</span>
+                            <span class="text-xs text-gray-400">销量2.3万</span>
+                        </div>
+                        <div class="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                            <i class="fas fa-store text-xs text-gray-400"></i>
+                            <span class="text-xs text-gray-500 truncate">雅品茶业旗舰店</span>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-red-100 to-red-50 rounded-xl mb-2 flex items-center justify-center">
+                            <span class="text-4xl">🍂</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 truncate">正山小种</h4>
+                        <p class="text-xs text-gray-500 mb-1">特级红茶</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold">¥368</span>
+                            <span class="text-xs text-gray-400">销量1.8万</span>
+                        </div>
+                        <div class="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                            <i class="fas fa-store text-xs text-gray-400"></i>
+                            <span class="text-xs text-gray-500 truncate">雅品茶业旗舰店</span>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl mb-2 flex items-center justify-center">
+                            <span class="text-4xl">🌿</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 truncate">铁观音</h4>
+                        <p class="text-xs text-gray-500 mb-1">安溪乌龙</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold">¥458</span>
+                            <span class="text-xs text-gray-400">销量1.5万</span>
+                        </div>
+                        <div class="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                            <i class="fas fa-store text-xs text-gray-400"></i>
+                            <span class="text-xs text-gray-500 truncate">雅品茶业旗舰店</span>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl mb-2 flex items-center justify-center">
+                            <span class="text-4xl">🌸</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 truncate">白毫银针</h4>
+                        <p class="text-xs text-gray-500 mb-1">福鼎白茶</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold">¥588</span>
+                            <span class="text-xs text-gray-400">销量1.2万</span>
+                        </div>
+                        <div class="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                            <i class="fas fa-store text-xs text-gray-400"></i>
+                            <span class="text-xs text-gray-500 truncate">雅品茶业旗舰店</span>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 rounded-xl mb-2 flex items-center justify-center">
+                            <span class="text-4xl">🍃</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 truncate">碧螺春</h4>
+                        <p class="text-xs text-gray-500 mb-1">洞庭碧螺</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold">¥398</span>
+                            <span class="text-xs text-gray-400">销量9千</span>
+                        </div>
+                        <div class="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                            <i class="fas fa-store text-xs text-gray-400"></i>
+                            <span class="text-xs text-gray-500 truncate">雅品茶业旗舰店</span>
+                        </div>
+                    </a>
+                    <a href="product-detail.html" class="bg-white rounded-2xl p-3 card-shadow">
+                        <div class="aspect-square bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl mb-2 flex items-center justify-center">
+                            <span class="text-4xl">🫖</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-gray-800 truncate">紫砂茶壶</h4>
+                        <p class="text-xs text-gray-500 mb-1">宜兴紫砂</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold">¥1288</span>
+                            <span class="text-xs text-gray-400">销量5千</span>
+                        </div>
+                        <div class="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                            <i class="fas fa-store text-xs text-gray-400"></i>
+                            <span class="text-xs text-gray-500 truncate">雅品茶业旗舰店</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="category.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </a>
+            <a href="cart.html" class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>购物车</span>
+            </a>
+            <a href="order.html" class="nav-item">
+                <i class="fas fa-file-alt"></i>
+                <span>订单</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </div>
+
+        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-50">
+            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:bg-green-700 transition-colors" onclick="toggleCustomerService()">
+                <i class="fas fa-headset text-white text-lg"></i>
+            </div>
+            <div class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></div>
+        </div>
+
+        <div class="iphone-home-indicator"></div>
+
+        <div id="customerServicePanel" class="hidden absolute right-16 top-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl z-[999] p-4 w-48">
+            <div class="absolute -right-2 top-4 w-4 h-4 bg-white transform rotate-45"></div>
+            <h4 class="text-sm font-semibold text-gray-800 mb-3">联系客服</h4>
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-weixin text-green-500 text-lg"></i>
+                    <div>
+                        <p class="text-xs text-gray-500">微信号</p>
+                        <p class="text-sm font-medium text-gray-800">tea_service_001</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-green-500 text-lg"></i>
+                    <div>
+                        <p class="text-xs text-gray-500">手机号</p>
+                        <p class="text-sm font-medium text-gray-800">138-8888-8888</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function toggleFilter() {
+            const filterPanel = document.getElementById('filterPanel');
+            if (filterPanel.classList.contains('hidden')) {
+                filterPanel.classList.remove('hidden');
+            } else {
+                filterPanel.classList.add('hidden');
+            }
+        }
+
+        function toggleCustomerService() {
+            const customerServicePanel = document.getElementById('customerServicePanel');
+            if (customerServicePanel.classList.contains('hidden')) {
+                customerServicePanel.classList.remove('hidden');
+            } else {
+                customerServicePanel.classList.add('hidden');
+            }
+        }
+
+        function scrollCategories(direction) {
+            const container = document.getElementById('categoryContainer');
+            const scrollAmount = 200;
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
